@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-*, *::before, *::after{box-sizing: border-box;}
+*{box-sizing: border-box;}
 body{
+    background-image: url("../img/Ronnie\ Coleman2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     font-family: 'Oswald', sans-serif;
 }
@@ -33,62 +36,72 @@ body{
     float: left;
 }
 
-.bg{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-}
-
-.bg::before{
-    content: "";
-    background-image: url("../img/Ronnie\ Coleman.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    opacity: 0.5;
-}
-
 .container{
-    max-width: 1100px;
+    transition: 1s;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
-}
-
-.card{
-    background-color: gray;
-    min-width: 200px;
-    margin-bottom: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 27%;
-}
-
-.row{
     justify-content: space-around;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin-top: 45px;
 }
 
-.row .card{
-    padding: 15px;
+.card{
+    background-color: black;
     min-width: 200px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 27%;
+    padding: 15px;
     border-radius: 12px;
-    margin: 10px;
-    flex-basis: 22%;
+    margin: 15px;
+    box-shadow: 0 5px 10px #ffffff;
+    transition: 1s;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card:hover{
+    transform: scale(1.1);
 }
 
 .card img{
-    height: 130px;
-    width: 130px;
+    height: 150px;
+    width: 150px;
     padding: 3px;
-    margin-bottom: 14px;
     border-radius: 50%;
     border: 3px solid red;
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.name{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    margin-top: 5px;
+
+}
+
+.btn{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 8px 30px;
+    margin: 20px 0px;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background-color: gray;
 }

@@ -41,7 +41,7 @@ body{
 
 .bg::before{
     content: "";
-    background-image: url("../img/Bohos.jpg");
+    background-image: url("../img/Bohos2.jpg");
     background-size: cover;
     position: absolute;
     top: 0px;
