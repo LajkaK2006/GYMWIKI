@@ -2,22 +2,27 @@
 <html lang="hu">
 <head>
     <link rel="stylesheet" href="css/mesterek.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesterek</title>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav" id="myTopnav">
         <div class="logo">
             <img src="img/logo.png">
         </div>
-
-        <a class="active" href="mesterek.html">Mesterek</a>
-        <a href="utmutato.html">Útmutató</a>
-        <a href="bolt.html">Bolt</a>
-        <a href="rolunk.html">Rólunk</a>
-        <a href="gymwiki.html">Főoldal</a>
+        <a href="javascript:void(0);" class="ikon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="nav_elements">
+            <a class="active" href="mesterek.html">Mesterek</a>
+            <a href="utmutato.html">Útmutató</a>
+            <a href="bolt.html">Bolt</a>
+            <a href="rolunk.html">Rólunk</a>
+            <a href="gymwiki.html">Főoldal</a>
+        </div>
     </div>
         <div class="container">
             <div class="card">
@@ -98,5 +103,18 @@
                 </div>
             </div>
         </div>
+
+
+
+        <script>
+            function myFunction() {
+                var x=document.getElementById("myTopnav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+            }
+        </script>
 </body>
 </html>
