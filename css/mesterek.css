@@ -20,6 +20,7 @@ body{
     padding: 14px 16px;
     color: white;
     text-decoration: none;
+    display: block;
 }
 
 .nav a:hover{
@@ -104,4 +105,37 @@ a{
 
 .btn:hover{
     background-color: gray;
+}
+
+.nav .ikon{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.ikon{
+        float: right;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .nav.responsive{
+        position: relative;
+    }
+    .nav.responsive.ikon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .nav.responsive .nav_elements a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .nav.responsive img{
+        display: none;
+    }
+
 }
