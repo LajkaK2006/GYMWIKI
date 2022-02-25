@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <link rel="stylesheet" href="css/mainmenu.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYMWIKI</title>
+    <link rel="stylesheet" href="css/mainmenu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="nav">
-        <div class="logo">
-            <img src="img/logo.png">
-        </div>
-
-        <a class="active" href="mainmenu.html">Főoldal</a>
+  <div class="nav" id="myTopnav">
+    <div class="logo">
+        <img src="img/logo.png">
+    </div>
+    <a href="javascript:void(0);" class="ikon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div class="nav_elements">
+        <a class="active" href="mesterek.html">Mesterek</a>
         <a href="utmutato.html">Útmutató</a>
         <a href="bolt.html">Bolt</a>
-        <a href="mesterek.html">Mesterek</a>
         <a href="rolunk.html">Rólunk</a>
+        <a href="mainmenu.html">Főoldal</a>
     </div>
-    <h1>Fogyni szeretnél,vagy esetleg izmot felépíteni?</h1>
-    <h1> Ez a te oldalad!</h1>
-    <h1>Itt mindent megtalálsz!</h1>
+  </div>
+  
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="img/ca2.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/ca1.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/bg2.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
     <div class="footer">
         <p>GYMWIKI 2022</p>
     </div>
+
+<script>
+      function myFunction() {
+            var x=document.getElementById("myTopnav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
+      }
+
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000);
+      }
+</script>
 </body>
 </html>
