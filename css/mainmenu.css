@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-*, *::before, *::after{box-sizing: border-box;}
+*{box-sizing: border-box;}
 body{
-    background-image: url("../img/GYMWIKI\ logo.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/bg.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     font-family: 'Oswald', sans-serif;
 }
@@ -12,6 +12,7 @@ h1{
     text-align: center;
     color: black;
 }
+
 
 .nav{
     overflow: hidden;
@@ -25,6 +26,7 @@ h1{
     padding: 14px 16px;
     color: white;
     text-decoration: none;
+    display: block;
 }
 
 .nav a:hover{
@@ -41,6 +43,15 @@ h1{
     float: left;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav .ikon{
+    display: none;
+}
+
 .footer{
     position: fixed;
     left: 0;
@@ -51,4 +62,89 @@ h1{
     color: white;
     text-align: center;
     opacity: 0.4;
+}
+
+.mySlides {
+    display: none
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.ikon{
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+.nav.responsive{
+    position: relative;
+    }
+.nav.responsive.ikon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+.nav.responsive .nav_elements a{
+    float: none;
+    display: block;
+    text-align: left;
+    }
+.nav.responsive img{
+    display: none;
+    }
+
 }
