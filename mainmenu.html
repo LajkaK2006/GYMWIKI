@@ -17,11 +17,11 @@
         <i class="fa fa-bars"></i>
     </a>
     <div class="nav_elements">
-        <a class="active" href="mesterek.html">Mesterek</a>
+        <a class="active" href="mainmenu.html">Föoldal</a>
         <a href="utmutato.html">Útmutató</a>
         <a href="bolt.html">Bolt</a>
         <a href="rolunk.html">Rólunk</a>
-        <a href="mainmenu.html">Főoldal</a>
+        <a href="mesterek.html">Mesterek</a>
     </div>
   </div>
   
@@ -29,31 +29,59 @@
 
     <div class="mySlides fade">
       <img src="img/ca2.jpg" style="width:100%">
-      <div class="text">Magyarország</div>
+      <div class="text" style="color: orange;">Arnold Schwarzenegger</div>
     </div>
     
     <div class="mySlides fade">
       <img src="img/ca1.jpg" style="width:100%">
-      <div class="text">Magyarország</div>
+      <div class="text" style="color: orangered;">Eszközök széles választékban!</div> 
     </div>
     
     <div class="mySlides fade">
       <img src="img/bg2.jpg" style="width:100%">
-      <div class="text">Magyarország</div>
+      <div class="text" style="color: black;">Az egyik legjobb választás!</div>
     </div>
-    
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
+      <div class="slideshow-nav">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
 
-    <div class="footer">
-        <p>GYMWIKI 2022</p>
-    </div>
+    <div class="container-cards">
+      <div class="box">
+          <div class="icon">
+            <i class="fa fa-question" aria-hidden="true"></i>
+          </div>
+          <div class="content">
+              <h3>Információk</h3>
+              <p>Tudj meg többet rólunk!</p>
+              <a class="box-link" href="rolunk.html">Olvass tovább</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div class="content">
+              <h3>Keresés</h3>
+              <p>Nézz szét nálunk!</p>
+              <a class="box-link" href="mesterek.html">Olvass tovább</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="icon">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          </div>
+          <div class="content">
+              <h3>Áruház</h3>
+              <p>Széles kínálatokkal várunk!</p>
+              <a class="box-link" href="bolt.html">Olvass tovább</a>
+          </div>
+      </div>
+  </div>
 
 <script>
       function myFunction() {
@@ -67,6 +95,9 @@
 
       var slideIndex = 0;
       showSlides();
+      function currentSlide(n) {
+        showSlides(slideIndex=n);
+      }
 
       function showSlides() {
         var i;
@@ -76,7 +107,7 @@
           slides[i].style.display = "none";  
         }
         slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
+          if (slideIndex > slides.length) {slideIndex = 1}    
         for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
         }
