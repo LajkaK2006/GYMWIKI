@@ -2,82 +2,130 @@
 <html lang="hu">
 <head>
     <link rel="stylesheet" href="css/rolunk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rólunk</title>
 </head>
 <body>
-    <div class="nav">
-        <div class="logo">
-            <img src="img/logo2.png">
-        </div>
-
+<div class="nav" id="myTopnav">
+    <div class="logo">
+        <img src="img/logo2.png">
+    </div>
+    <a href="javascript:void(0);" class="ikon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div class="nav_elements">
         <a class="active" href="rolunk.html">Rólunk</a>
         <a href="utmutato.html">Útmutató</a>
         <a href="bolt.html">Bolt</a>
         <a href="mesterek.html">Mesterek</a>
         <a href="mainmenu.html">Főoldal</a>
     </div>
+</div>
+    <h1>The GYMWIKI Team</h1>
+    <span class="border"></span>
     <div class="team">
-        <h1>The GYMWIKI Team</h1>
-
-        <div class="team-text" id="p1">
-            <img id="first" src="img/Gergely2.png" alt="">
-            <div class="nev"><a id="1" onclick="myFunction1()">Borbély Gergely</a></div>
-            
+        <div class="card">
+            <div class="img">
+                <img src="img/Gergely2.png">
+            </div>
+            <div class="text">
+                <h2>Borbély Gergely</h2>
+                <div class="btn">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="more-text">
+                <h2>Borbély Gergely</h2>
+                <p>Kedvelem a kosarlabdát és még sok más sportot.
+                1 éve elkezdtem kosarazni és most jelenleg a Kandónál kosarazok, 
+                de a jövőbe a cél, hogy egy profibb kosárlabda csapatnál játszak.
+                Példaképeim az NBA-be szerepelnek: LeBron James és Stephen Curry.
+                </p>
+            </div>
         </div>
 
-        <div class="team-text" id="p2">
-            <img id="second" src="img/Kristóf.jpg" alt="">
-            <div class="nev"><a id="2" onclick="myFunction2()">Lajka Kristóf</a></div>
-            
+        <div class="card">
+            <div class="img">
+                <img src="img/Kristóf.jpg">
+            </div>
+            <div class="text">
+                <h2>Lajka Kristóf</h2>
+                <div class="btn">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="more-text">
+                <h2>Lajka Kristóf</h2>
+                <p>Kedvelem a Forma-1-et, testépítést és a történelmet.
+                    Célom az, hogy minél többet fogyjak és erősödjek.
+                    Nagy álmom a honvédségbe bekerülni.
+                </p>
+            </div>
         </div>
-
-        <div class="team-text" id="p3">
-            <img id="third" src="img/Laci2.png" alt="">
-            <div class="nev"><a id="3" onclick="myFunction3()">Ruszkai László</a></div>
-            
+        <div class="card">
+            <div class="img">
+                <img src="img/Laci2.png">
+            </div>
+            <div class="text">
+                <h2>Ruszkai László</h2>
+                <div class="btn">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="more-text">
+                <h2>Ruszkai László</h2>
+                <p>Kedvelem a testépítést és az ehhez kapcsolódó sportok területét.
+                    Kiskorom óta előtérbe helyeztem a sportolást.
+                    Próbálok egyre többet fejlődni és a jövőben szeretnék segíteni másoknak.
+                </p>
+            </div>
         </div>
     </div>
-
-    
+    <script>
+        function myFunction() {
+              var x=document.getElementById("myTopnav");
+              if (x.className === "nav") {
+                  x.className += " responsive";
+              } else {
+                  x.className = "nav";
+              }
+        }
+  
+        var slideIndex = 0;
+        showSlides();
+        function currentSlide(n) {
+          showSlides(slideIndex=n);
+        }
+  
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000);
+        }
+  </script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    var a=document.getElementById("1")
-    var b=document.getElementById("2")
-    var c=document.getElementById("3")
-
-    var img=0
-
-    function myFunction1(){
-        if (a.innerHTML=="Borbély Gergely"){a.innerHTML="Kedvelem a kosarlabdát és még sok más sportot. 1 éve elkezdtem kosarazni és most jelenleg a Kandónál kosarazok, de a jövőbe a cél, hogy egy profibb kosárlabda csapatnál játszak. Példaképeim az NBA-be szerepelnek: LeBron James és Stephen Curry."}
-        else {a.innerHTML="Borbély Gergely"}
-    }
-
-    function myFunction2(){
-        if (b.innerHTML=="Lajka Kristóf"){b.innerHTML="Kedvelem a Forma-1-et, testépítést és a történelmet. Célom az, hogy minél többet fogyjak és erősödjek. Nagy álmom a honvédségbe bekerülni."}
-        else {b.innerHTML="Lajka Kristóf"}
-    }
-
-    function myFunction3(){
-        if (c.innerHTML=="Ruszkai László"){c.innerHTML="Kedvelem a testéptést és az ehhez kapcsolódó sportok területét. Kiskorom óta előtérbe helyeztem a sportolást. Próbálok egyre többet fejlődni és a jövőben szeretnék segíteni másoknak."}
-        else {c.innerHTML="Ruszkai László"}
-    }
-
+    $(document).ready(function(){
+        $(".btn").on("click", function(){
+            $(this).parent().parent().find(".more-text").toggleClass("active");
+        });
+    }); 
 </script>
+
 </body>
 </html>
-
-<p>
-    
-</p>
-
-<p>
-    Kedvelem a Forma-1-et, testépítést és a történelmet.
-     Célom az, hogy minél többet fogyjak és erősödjek.
-     Nagy álmom a honvédségbe bekerülni.
- </p>
-
- <p>
-    
- </p>
