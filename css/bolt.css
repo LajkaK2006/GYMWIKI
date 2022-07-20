@@ -12,6 +12,11 @@ h1{
     text-align: center;
 }
 
+.title{
+    text-align: center;
+    text-decoration: overline;
+}
+
 .nav{
     overflow: hidden;
     background-color: #333;
@@ -50,4 +55,94 @@ h1{
     color: white;
     text-align: center;
     opacity: 0.4;
+}
+
+.nav .ikon{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.ikon{
+        float: right;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .nav.responsive{
+        position: relative;
+    }
+    .nav.responsive.ikon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .nav.responsive .nav_elements a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .nav.responsive img{
+        display: none;
+    }
+}
+
+.container{
+    transition: 1s;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    max-width: 1080px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: white;
+    min-width: 200px;
+    margin-bottom: 50px;
+    flex-basis: 27%;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px;
+    box-shadow: 0 5px 10px #ffffff;
+    transition: 1s;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card img{
+    height: 150px;
+    width: 150px;
+    padding: 3px;
+    object-fit: cover;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 8px 30px;
+    margin: 10px 0px;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background-color: #ff523b;
+}
+
+a{
+    text-decoration: none;
 }

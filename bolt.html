@@ -2,24 +2,89 @@
 <html lang="hu">
 <head>
     <link rel="stylesheet" href="css/bolt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolt</title>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav" id="myTopnav">
         <div class="logo">
             <img src="img/logo2.png">
         </div>
-
-        <a class="active" href="mainmenu.html">Főoldal</a>
-        <a href="bolt.html">Bolt</a>
-        <a href="utmutato.html">Útmutató</a>
-        <a href="mesterek.html">Mesterek</a>
-        <a href="rolunk.html">Rólunk</a>
+        <a href="javascript:void(0);" class="ikon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="nav_elements">
+            <a class="active" href="mainmenu.html">Főoldal</a>
+            <a href="bolt.html">Bolt</a>
+            <a href="utmutato.html">Útmutató</a>
+            <a href="mesterek.html">Mesterek</a>
+            <a href="rolunk.html">Rólunk</a>
+        </div>
     </div>
-    <h1>Készítés alatt!</h1>
+    <div class="container">
+        <h2 class="title">Protein</h2>
+        <br>
+        <div class="row">
+            <div class="card">
+                <img src="bolt_img/BiotechUSA L-Arginine.png">
+                <h4>BiotechUSA L-Arginine</h4>
+                <p>270FT</p>
+                <a href="https://hu.wikipedia.org/wiki/Kathi_B%C3%A9la" target="_blank" class="btn">Részletek</a>
+            </div>
+            <div class="card">
+                <img src="bolt_img/Miscellar.png">
+                <h4>BiotechUSA Micellar Casein 30g</h4>
+                <p>370FT</p>
+                <a href="https://www.szon.hu/haon-sportoldal/2012/05/bohos-kornel-wbpf-europabajnok" target="_blank" class="btn">Részletek</a>
+            </div>
+        </div>
+        <h2 class="title">Vitaminok</h2>
+        <br>
+        <div class="row">
+            <div class="card">
+                <img src="bolt_img/BiotechUSA Multivitamin Nőknek.jpg">
+                <h4>BiotechUSA Multivitamin Nőknek 60 tabletta</h4>
+                <p>4.550FT</p>
+                <a href="https://hu.wikipedia.org/wiki/Arnold_Schwarzenegger-filmogr%C3%A1fia" target="_blank" class="btn">Részletek</a>
+            </div>
+            <div class="card">
+                <img src="bolt_img/BiotechUSA Multivitamin Férfiaknak.jpg">
+                <h4>BiotechUSA Multivitamin Férfiaknak 60 tabletta</h4>
+                <p>4.550FT</p>
+                <a href="https://hu.wikipedia.org/wiki/Arnold_Schwarzenegger-filmogr%C3%A1fia" target="_blank" class="btn">Részletek</a>
+            </div>
+        </div>
+        <h2 class="title">Fehérjék</h2>
+        <br>
+        <div class="row">
+            <div class="card">
+                <img src="bolt_img/True Whey.png">
+                <h4>True Whey fehérje - GymBeam</h4>
+                <p>8.990Ft</p>
+                <a href="https://hu.wikipedia.org/wiki/Arnold_Schwarzenegger-filmogr%C3%A1fia" target="_blank" class="btn">Részletek</a>
+            </div>
+            <div class="card">
+                <img src="bolt_img/Pure IsoWhey.png">
+                <h4>Pure IsoWhey fehérje - GymBeam</h4>
+                <p>23.090Ft</p>
+                <a href="https://hu.wikipedia.org/wiki/Arnold_Schwarzenegger-filmogr%C3%A1fia" target="_blank" class="btn">Részletek</a>
+            </div>
+        </div>
+
+
+    <script>
+        function myFunction() {
+            var x=document.getElementById("myTopnav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
+        }
+    </script>
    
 </body>
 </html>
